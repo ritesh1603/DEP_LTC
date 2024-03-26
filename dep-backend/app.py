@@ -29,8 +29,8 @@ cors = CORS(app, resources={"/*": {"origins": "*"}})
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 #postgres://dep_database_render_user:lEejAMNz4Lp312Fgj26l3ZWNwHTLRSyK@dpg-co0t6k7109ks73biiv0g-a.singapore-postgres.render.com/dep_database_render
 db.init_app(app)
 
